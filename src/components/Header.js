@@ -51,10 +51,10 @@ const Header = ({ resumeData }) => {
             <h1 className="responsive-headline">I am {resumeData.name}.</h1>
             <h3
               style={
-                { color: "#ebeeee9e", fontFamily: "sans-serif" } // className="responsive-role-desc"
+                { color: "#ffffffe8", fontFamily: "sans-serif" } // className="responsive-role-desc"
               }
             >
-              I am a {resumeData.role}.{resumeData.roleDescription}
+              I am a {resumeData.role}. {resumeData.roleDescription} \m/
             </h3>
             <hr />
             <ul className="social">

@@ -1,11 +1,11 @@
 let resumeData = {
   imagebaseurl: "https://rbhatia46.github.io/",
   name: "Ugur Kıymetli",
-  role: "Fullstack Developer",
+  role: "Full Stack Web Developer",
   linkedinId: "ugurkiymetli",
   skypeid: "ugurkiymetli",
   roleDescription:
-    "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
+    "I like dabbling in various parts of software development and like to learn about new technologies, read technical articles or simply play games in my free time. Also a metal head",
   socialLinks: [
     {
       name: "linkedin",
