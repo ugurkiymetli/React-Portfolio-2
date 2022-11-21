@@ -4,7 +4,7 @@ A simple SPA Portfolio template for developer/designers built with React. Use it
 
 ## Preview
 
-![Preview](https://user-images.githubusercontent.com/34272634/203147720-7b9e4302-d95d-46d7-aa11-727995f03287.jpg)
+![Preview](https://user-images.githubusercontent.com/34272634/203168735-afd38fe8-58f5-4a00-943d-d18b230d57e4.png)
 
 ## How to use
 
@@ -13,5 +13,9 @@ A simple SPA Portfolio template for developer/designers built with React. Use it
 3. Change the values in `src/resumeData.js` to suit your use-case.
 4. Run `npm start` to spin the up the local dev server port 3000.(http://localhost:3000).
 5. Make required changes in `src/resumeData.js` to suit your needs.
+
+## My Personal Portfolio Site - [ugurkiymetli.com](http://ugurkiymetli.com/)
+
+Using GitHub Pages as hosting. See [this repo](https://github.com/ugurkiymetli/ugurkiymetli/tree/pages-2) for details.
 
 Forked from this [repo]() ![Star this repository](https://img.shields.io/github/stars/rbhatia46/React-Portfolio?style=social)
