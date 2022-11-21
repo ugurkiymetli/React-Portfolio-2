@@ -7,9 +7,9 @@ const Footer = ({ resumeData }) => {
         <div className="twelve columns">
           <ul className="social-links">
             {resumeData.socialLinks &&
-              resumeData.socialLinks.map((item) => {
+              resumeData.socialLinks.map((item, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <a href={item.url}>
                       <i className={item.className} />
                     </a>

@@ -20,7 +20,9 @@ const About = ({ resumeData }) => {
                 <br />
                 <span>{resumeData.address}</span>
                 <br />
-                <span>{resumeData.website}</span>
+                <span>
+                  <a href={resumeData.websiteUrl}>{resumeData.website}</a>
+                </span>
               </p>
             </div>
           </div>

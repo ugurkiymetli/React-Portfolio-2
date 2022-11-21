@@ -32,7 +32,8 @@ const Header = ({ resumeData }) => {
                 Works
               </a>
             </li>
-            <li>
+            {/* TODO Fix / Change Below Components */}
+            {/* <li>
               <a className="smoothscroll" href="#testimonials">
                 Testimonials
               </a>
@@ -41,14 +42,18 @@ const Header = ({ resumeData }) => {
               <a className="smoothscroll" href="#contact">
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">I am {resumeData.name}.</h1>
-            <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
+            <h3
+              style={
+                { color: "#ebeeee9e", fontFamily: "sans-serif" } // className="responsive-role-desc"
+              }
+            >
               I am a {resumeData.role}.{resumeData.roleDescription}
             </h3>
             <hr />

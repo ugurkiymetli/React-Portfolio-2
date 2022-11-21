@@ -15,8 +15,9 @@ const App = () => {
       <About resumeData={resumeData} />
       <Resume resumeData={resumeData} />
       <Portfolio resumeData={resumeData} />
-      <Testimonials resumeData={resumeData} />
-      <ContactUs resumeData={resumeData} />
+      {/* TODO Fix / Change Below Components */}
+      {/* <Testimonials resumeData={resumeData} /> */}
+      {/* <ContactUs resumeData={resumeData} /> */}
       <Footer resumeData={resumeData} />
     </div>
   );

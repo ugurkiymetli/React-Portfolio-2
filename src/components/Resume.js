@@ -12,9 +12,9 @@ const Resume = ({ resumeData }) => {
 
         <div className="nine columns main-col">
           {resumeData.education &&
-            resumeData.education.map((item) => {
+            resumeData.education.map((item, index) => {
               return (
-                <div className="row item">
+                <div className="row item" key={index}>
                   <div className="twelve columns">
                     <h3>{item.UniversityName}</h3>
                     <p className="info">
@@ -69,15 +69,14 @@ const Resume = ({ resumeData }) => {
 
         <div className="nine columns main-col">
           <p>{resumeData.skillsDescription}</p>
-
           <div className="bars">
             <ul className="skills">
               {resumeData.skills &&
-                resumeData.skills.map((item) => {
+                resumeData.skills.map((item, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <span
-                        className={`bar-expand ${item.skillname.toLowerCase()}`}
+                        className={`bar-expand ${item.classname.toLowerCase()}`}
                       />
                       <em>{item.skillname}</em>
                     </li>
