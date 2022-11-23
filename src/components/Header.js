@@ -49,12 +49,9 @@ const Header = ({ resumeData }) => {
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">I am {resumeData.name}.</h1>
-            <h3
-              style={
-                { color: "#ffffffe8", fontFamily: "sans-serif" } // className="responsive-role-desc"
-              }
-            >
-              I am a {resumeData.role}. {resumeData.roleDescription} \m/
+            <h3 style={{ color: "#ffffffe8", fontFamily: "sans-serif" }}>
+              I am a {resumeData.role}. {resumeData.roleDescription}{" "}
+              <a href="https://youtu.be/zw79RVnlCb0">\m/</a>
             </h3>
             <hr />
             <ul className="social">
