@@ -1,10 +1,9 @@
-# .github/workflows/deploy.yml
-name: Deploy GitHub Pages to external repository
+name: Deploy to external GitHub repo for pages publish
 
 on:
   push:
     branches:
-      - git-actions-test
+      - pages
 
 jobs:
   build:
