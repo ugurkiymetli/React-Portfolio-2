@@ -1,67 +1,67 @@
-# .github/workflows/deploy.yml
-name: Deploy GitHub Pages to external repository
+# # .github/workflows/deploy.yml
+# name: Deploy GitHub Pages to external repository
 
-on:
-  # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
-  #  push:
-  #    branches: [ "main" ]
-  push:
-    tags:
-      - "*"
+# on:
+#   # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+#   #  push:
+#   #    branches: [ "main" ]
+#   push:
+#     branches:
+#       - git-actions-test
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
 
-    steps:
-      - uses: actions/checkout@v3
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: yarn
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
+#           cache: yarn
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build website
-        run: CI=false npm run build
+#       - name: Build website
+#         run: CI=false npm run build
 
-      - name: Deploy to external repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          # 🏗️ <internal repository>, run GitHub Action.
-          # 🎁 <external repository>, receiving Artifacts.
-          #
-          # Way 1: using Personal Access Token
-          # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-personal-access-token.html#setup-personal-access-token
-          # 1.1 Generate Personal Access Token: <external repository>/<Avatar>/Settings/Developer settings/Personal access tokens/Generate new token
-          #     Select `No expiration` and Check `✅️ repo    Full control of private repositories`, Generate and then Copy the Token
-          # 1.2 Then make the token available to the GitHub Action: <internal repository>/Settings/Secrets/Actions/New repository secret
-          #     Name: EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN, Value Paste the Token
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          # Way 2: using SSH deploy keys
-          # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-ssh-deploy-keys.html#setup-ssh-deploy-keys
-          # 2.1 Generate an SSH key in terminal (Leave the passphrase empty)
-          # 2.2 Add public key in the external repository: <external repository>/Settings/Deploy keys/Add deploy key
-          #     Name: DEPLOY_PUBLIC_KEY, Value Paste the public key. Enable "✅️ Allow write access"
-          # 2.3 Add private key in the source repository: <external repository>/Settings/Secrets/Actions/New repository secret
-          #     Name: DEPLOY_PRIVATE_KEY, Value Paste the private key.
-          # SSH_DEPLOY_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+#       - name: Deploy to external repository
+#         uses: cpina/github-action-push-to-another-repository@main
+#         env:
+#           # 🏗️ <internal repository>, run GitHub Action.
+#           # 🎁 <external repository>, receiving Artifacts.
+#           #
+#           # Way 1: using Personal Access Token
+#           # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-personal-access-token.html#setup-personal-access-token
+#           # 1.1 Generate Personal Access Token: <external repository>/<Avatar>/Settings/Developer settings/Personal access tokens/Generate new token
+#           #     Select `No expiration` and Check `✅️ repo    Full control of private repositories`, Generate and then Copy the Token
+#           # 1.2 Then make the token available to the GitHub Action: <internal repository>/Settings/Secrets/Actions/New repository secret
+#           #     Name: EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN, Value Paste the Token
+#           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#           # Way 2: using SSH deploy keys
+#           # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-ssh-deploy-keys.html#setup-ssh-deploy-keys
+#           # 2.1 Generate an SSH key in terminal (Leave the passphrase empty)
+#           # 2.2 Add public key in the external repository: <external repository>/Settings/Deploy keys/Add deploy key
+#           #     Name: DEPLOY_PUBLIC_KEY, Value Paste the public key. Enable "✅️ Allow write access"
+#           # 2.3 Add private key in the source repository: <external repository>/Settings/Secrets/Actions/New repository secret
+#           #     Name: DEPLOY_PRIVATE_KEY, Value Paste the private key.
+#           # SSH_DEPLOY_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
 
-        with:
-          # GitHub Action output files
-          source-directory: public/
-          destination-github-username: <github.com/ugurkiymetli>
-          destination-repository-name: <ugurkiymetli>
-          user-email: ${{secrets.EMAIL}}
-          # It defaults to `main`
-          target-branch: "pages-3"
+#         with:
+#           # GitHub Action output files
+#           source-directory: public/
+#           destination-github-username: <github.com/ugurkiymetli>
+#           destination-repository-name: <ugurkiymetli>
+#           user-email: ${{secrets.EMAIL}}
+#           # It defaults to `main`
+#           target-branch: "pages-3"
 
-      - name: Test get variable exported by push-to-another-repository
-        run: echo $DESTINATION_CLONED_DIRECTORY
+#       - name: Test get variable exported by push-to-another-repository
+#         run: echo $DESTINATION_CLONED_DIRECTORY
