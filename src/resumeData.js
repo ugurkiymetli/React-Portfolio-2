@@ -90,23 +90,23 @@ let resumeData = {
   ],
   portfolio: [
     {
-      name: "name",
-      description: "description",
+      name: "TO BE ADDED!",
+      description: "TO BE ADDED!",
       imgurl: "https://placehold.jp/400x80.png",
     },
     {
-      name: "name",
-      description: "description",
+      name: "TO BE ADDED!",
+      description: "TO BE ADDED!",
       imgurl: "https://placehold.jp/400x80.png",
     },
     {
-      name: "name",
-      description: "description",
+      name: "TO BE ADDED!",
+      description: "TO BE ADDED!",
       imgurl: "https://placehold.jp/400x80.png",
     },
     {
-      name: "name",
-      description: "description",
+      name: "TO BE ADDED!",
+      description: "TO BE ADDED!",
       imgurl: "https://placehold.jp/400x80.png",
     },
   ],

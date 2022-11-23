@@ -5,7 +5,14 @@ const Portfolio = ({ resumeData }) => {
     <section id="portfolio">
       <div className="row">
         <div className="twelve columns collapsed">
-          <h1>Check Out Some of My Works.</h1>
+          <h1>
+            <span style={{ fontSize: "x-large" }}>
+              <marquee behavior="" direction="">
+                WILL UPDATE HERE SOON 🤓💻
+              </marquee>{" "}
+            </span>
+            Check Out Some of My Works.
+          </h1>
           <div
             id="portfolio-wrapper"
             className="bgrid-quarters s-bgrid-thirds cf"
@@ -29,6 +36,13 @@ const Portfolio = ({ resumeData }) => {
                 );
               })}
           </div>
+          <h1>
+            <span style={{ fontSize: "x-large" }}>
+              <marquee behavior="" direction="">
+                WILL UPDATE HERE SOON 🤓💻
+              </marquee>{" "}
+            </span>
+          </h1>
         </div>
       </div>
     </section>
