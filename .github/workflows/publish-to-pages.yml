@@ -13,6 +13,12 @@ jobs:
       - name: git-checkout
         uses: actions/checkout@v2
 
+      - name: Install nodejs
+        uses: actions/setup-nodejs@v3
+        with:
+          node-version: '16.16.0'
+          cache: 'yarn'
+
       - name: Install all dependencies
         run: npm install
 
