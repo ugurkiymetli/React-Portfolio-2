@@ -13,8 +13,8 @@ const App = () => {
     <div className="App">
       <Header resumeData={resumeData} />
       <About resumeData={resumeData} />
-      <Resume resumeData={resumeData} />
       <Portfolio resumeData={resumeData} />
+      <Resume resumeData={resumeData} />
       {/* TODO Fix / Change Below Components */}
       {/* <Testimonials resumeData={resumeData} /> */}
       {/* <ContactUs resumeData={resumeData} /> */}

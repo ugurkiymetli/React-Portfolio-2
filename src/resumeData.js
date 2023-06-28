@@ -90,24 +90,18 @@ let resumeData = {
   ],
   portfolio: [
     {
-      name: "TO BE ADDED!",
-      description: "TO BE ADDED!",
-      imgurl: "https://placehold.jp/400x80.png",
+      name: "Jobber",
+      description:
+        "Hey everyone! I've got something awesome to share with you today: the Job Guessing Game! It's a super cool project I've been working on, using React, TypeScript, and Next.js. Get ready to test your luck and discover your dream job! 😎💼",
+      imgurl: "https://i.ibb.co/2t48Bm1/jobber.png",
+      link: "https://ugurkiymetli.github.io/jobber/",
     },
     {
-      name: "TO BE ADDED!",
-      description: "TO BE ADDED!",
-      imgurl: "https://placehold.jp/400x80.png",
-    },
-    {
-      name: "TO BE ADDED!",
-      description: "TO BE ADDED!",
-      imgurl: "https://placehold.jp/400x80.png",
-    },
-    {
-      name: "TO BE ADDED!",
-      description: "TO BE ADDED!",
-      imgurl: "https://placehold.jp/400x80.png",
+      name: "QR Menu",
+      description:
+        "The ultimate destination for foodies and restaurant enthusiasts! Here, youll find a collection of menus from a wide variety of restaurants, all in one convenient location. Whether youre looking for a new spot to try or simply curious about what your favorite restaurants have to offer, our app has you covered.",
+      imgurl: "https://i.ibb.co/T0DkXzr/qr-menu.png",
+      link: "https://ugurkiymetli.github.io/qr-menu/",
     },
   ],
   testimonials: [
