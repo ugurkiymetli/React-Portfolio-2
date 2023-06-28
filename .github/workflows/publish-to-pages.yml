@@ -16,8 +16,8 @@ jobs:
       - name: Install nodejs
         uses: actions/setup-node@v3
         with:
-          node-version: '16.16.0'
-          cache: 'yarn'
+          node-version: '18'
+          cache: 'npm'
 
       - name: Install all dependencies
         run: npm install
